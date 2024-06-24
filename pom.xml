@@ -38,7 +38,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>TestApplication</mainClass>
+                            <mainClass>TicTacToe</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
