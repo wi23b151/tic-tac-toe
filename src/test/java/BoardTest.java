@@ -21,4 +21,13 @@ public class BoardTest {
         Assertions.assertEquals(Boolean.TRUE, board.place(1,1, 'X'));
         Assertions.assertEquals(Boolean.FALSE, board.place(1,1, 'X'));
     }
+
+    @Test
+    void testPSize() {
+
+        Board board = new Board();
+
+        Assertions.assertTrue(board.getColSize() > 0 && board.getColSize() <= 3, "Size cols nok");
+        Assertions.assertTrue(board.getRowSize() > 0 && board.getRowSize() <= 3, "Size row nok");
+    }
 }

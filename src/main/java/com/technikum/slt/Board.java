@@ -62,5 +62,13 @@ public class Board {
             return (cells[0][0] == marker && cells[1][1] == marker && cells[2][2] == marker) ||
                     (cells[0][2] == marker && cells[1][1] == marker && cells[2][0] == marker);
         }
+
+        public int getRowSize() {
+            return cells.length;
+        }
+
+        public int getColSize() {
+            return cells[0].length;
+        }
     }
 
