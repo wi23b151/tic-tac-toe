@@ -21,10 +21,18 @@ import java.util.Scanner;
             while (true) {
                 board.print();
                 System.out.println("Current Player: " + currentPlayer.getMarker());
-                System.out.print("Enter row (0-2): ");
-                int row = scanner.nextInt();
-                System.out.print("Enter column (0-2): ");
-                int col = scanner.nextInt();
+
+                int row = -1;
+                while (row < 0 || row >= board.getRowSize() ) {
+                    System.out.print("Enter row (0-2): ");
+                    row = scanner.nextInt();
+                }
+                int col = -1;
+                while (col < 0 || col >= board.getColSize() )
+                {
+                    System.out.print("Enter column (0-2): ");
+                     col = scanner.nextInt();
+                }
 
                 if (board.place(row, col, currentPlayer.getMarker())) {
                     if (board.checkWin(currentPlayer.getMarker())) {
