@@ -13,9 +13,9 @@ name: Java CI with Maven
 # Definition der Trigger die zum Auslösen führen
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
     branches: [ "dev" ]
+  pull_request:
+    branches: [ "main" ]
   # Möglichkeit den Worklow auch manuell anzustoßen
   workflow_dispatch:
 
